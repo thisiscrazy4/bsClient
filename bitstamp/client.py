@@ -534,7 +534,7 @@ class Trading(Public):
                           version=2)
 
     def open_bank_withdrawal(self, amount, account_currency,
-                             name, IBAN, BIC,
+                             name, iban, bic,
                              address, postal_code, city, country, w_type,
                              bank_name, bank_address, bank_postal_code,
                              bank_city, bank_country, currency, comment):
@@ -549,8 +549,9 @@ class Trading(Public):
             """
         data = {'amount': amount,
             'account_currency': account_currency,
-                'IBAN': IBAN,
-                'BIC': BIC,
+                'iban': iban,
+                'name': name,
+                'bic': bic,
                 'address': address,
                 'postal_code': postal_code,
                 'city': city,
